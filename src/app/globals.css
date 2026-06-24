@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #F8FAFC;
+  --color-brand-dark: #0F172A;
+  --color-brand-accent: #2563EB;
+  --color-brand-success: #16A34A;
+  --color-brand-warning: #D97706;
+  --color-brand-danger: #DC2626;
+
+  --shadow-brutalist: 4px 4px 0px 0px #0F172A;
+  --shadow-brutalist-hover: 2px 2px 0px 0px #0F172A;
+  --shadow-brutalist-lg: 8px 8px 0px 0px #0F172A;
+  --shadow-brutalist-sm: 2px 2px 0px 0px #0F172A;
+
+  --font-sans: var(--font-outfit), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+}
+
+:root {
+  --background: #F8FAFC;
+  --foreground: #0F172A;
+}
+
+/* Force light mode base variables */
+html {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  color-scheme: light;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Brutalist geometric borders and custom layout structures */
+.brutalist-card {
+  background-color: #ffffff;
+  border: 2px solid #0F172A;
+  box-shadow: 4px 4px 0px 0px #0F172A;
+  transition: all 0.15s ease-in-out;
+}
+
+.brutalist-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px #0F172A;
+}
+
+.brutalist-button {
+  background-color: #ffffff;
+  border: 2px solid #0F172A;
+  box-shadow: 4px 4px 0px 0px #0F172A;
+  font-weight: 700;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.brutalist-button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px #0F172A;
+}
+
+.brutalist-button:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px 0px #0F172A;
+}
+
+.brutalist-input {
+  background-color: #ffffff;
+  border: 2px solid #0F172A;
+  padding: 0.5rem 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  outline: none;
+}
+
+.brutalist-input:focus {
+  border-color: var(--color-brand-accent);
+  box-shadow: 2px 2px 0px 0px #0F172A;
+}
+
